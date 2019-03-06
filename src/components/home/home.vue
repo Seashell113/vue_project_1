@@ -9,7 +9,7 @@
     <div class="grid">
       <my-ul>
         <my-li v-for="(grid,index) in grids" :key="index">
-          <router-link :to="{name:grid.router}">
+          <router-link :to="grid.router">
             <span class="cms-news" :class="grid.className"></span>
             <p>{{grid.title}}</p>
           </router-link>
