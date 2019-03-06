@@ -2,7 +2,7 @@
 
 > A Vue.js project
 
-This is a vue project for personally practice with mint-ui and axios.
+This is a vue project for personally practice with mint-ui and axios...
 
 ## Build Setup
 
