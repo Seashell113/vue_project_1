@@ -4,6 +4,12 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
+import './assets/css/global.css'
+import MyUl from '@/components/common/myUl'
+import MyLi from '@/components/common/myLi'
+
+Vue.component(MyUl.name,MyUl)
+Vue.component(MyLi.name,MyLi)
 // mint-ui
 import MintUI from 'mint-ui'
 import 'mint-ui/lib/style.css'
