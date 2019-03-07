@@ -7,9 +7,10 @@ import router from './router'
 import './assets/css/global.css'
 import MyUl from '@/components/common/myUl'
 import MyLi from '@/components/common/myLi'
-
+import NavBar from '@/components/common/navBar'
 Vue.component(MyUl.name,MyUl)
 Vue.component(MyLi.name,MyLi)
+Vue.component(NavBar.name,NavBar)
 // mint-ui
 import MintUI from 'mint-ui'
 import 'mint-ui/lib/style.css'
@@ -21,6 +22,15 @@ Axios.defaults.baseURL = 'https://www.sinya.online/api/'
 Vue.prototype.$axios = Axios
 
 Vue.config.productionTip = false
+
+// 全局过滤器
+Vue.filter('convertTime',function (value) {
+  if(typeof(value) == "string" && value.length>0){
+      let arr=value.split('-');
+      return arr[0]+'年'+arr[1]+'月'+arr[2]+'日';
+  }
+})
+
 
 /* eslint-disable no-new */
 new Vue({

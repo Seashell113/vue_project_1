@@ -20,6 +20,7 @@
       查找
     </mt-tab-item>
   </mt-tabbar>
+
   </div>
 </template>
 
@@ -27,32 +28,49 @@
 export default {
   data:function() {
     return {
-      selected: ""
+      selected: "",
+      test: 1
     }
   },
   updated(){
-   
-      console.log(1);
-    
+
+    //  console.log(1);
+   // console.log(this.selected);
+    // this.$router.push({
+    //   name: this.selected
+    // })
   },
   methods: {
-    changeHash(){
-        console.log(this.selected)
-      this.$nextTick(function (){
-        console.log(this.selected);
-        this.$router.push({
-          name: this.selected
-        })
+
+     changeHash(){
+    // =========problems wait for solve
+    //   this.$nextTick(function (){
+    //    console.log(this.selected,2);
+    //     this.$router.push({
+    //       name: this.selected
+    //     })
+    //  })
+
+        console.log(this.selected,1)
+      // setTimeout(()=>{
+      //   console.log(this.selected,2);
+      // })
+    },
+    changeTest(){
+      console.log(this.test);
+      this.$nextTick(function () {
+        console.log(this.test);
       })
+      this.test = 2;
     }
   },
   watch: {
-   // selected(newV,oldV) {
-   //   console.log(newV);
-   //   this.$router.push({
-   //     name: newV
-   //   })
-   // }
+   selected(newV,oldV) {
+      console.log(newV);
+      this.$router.push({
+        name: newV
+      })
+    }
   }
 }
 </script>

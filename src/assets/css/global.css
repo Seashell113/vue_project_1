@@ -2,6 +2,9 @@ html,body,div,ul,li,ol,p {
   margin: 0;
   padding: 0;
 }
+body {
+  padding-bottom: 55px;
+}
 img {
   max-width: 100%;
 }
