@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <mt-header title="hahahah"></mt-header>
-    <router-view />
+    <router-view class="tmpl" />
     <mt-tabbar v-model="selected">
     <mt-tab-item id="home">
       <img @click="changeHash" slot="icon" src="./assets/image/shouye.png">
@@ -76,5 +76,8 @@ export default {
 </script>
 
 <style>
-
+.tmpl {
+  height: calc(100vh - 95px);
+  overflow: auto;
+}
 </style>

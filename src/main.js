@@ -3,6 +3,8 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import Moment from 'moment'
+
 
 import './assets/css/global.css'
 import MyUl from '@/components/common/myUl'
@@ -30,7 +32,9 @@ Vue.filter('convertTime',function (value) {
       return arr[0]+'年'+arr[1]+'月'+arr[2]+'日';
   }
 })
-
+Vue.filter('dateFormat',function (value, pattern = 'YYYY-MM-DD HH:mm:ss'){
+    return Moment(value).format(pattern);
+})
 
 /* eslint-disable no-new */
 new Vue({
